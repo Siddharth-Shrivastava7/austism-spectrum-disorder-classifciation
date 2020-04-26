@@ -13,7 +13,7 @@ def collect_and_download(derivative, pipeline, strategy, out_dir):
 
     derivative = derivative.lower()
     pipeline = pipeline.lower()
-    strategy = strategy.lower()
+    strategy = strategy.lower() 
 
     if "roi" in derivative:
         extension = ".1D"
@@ -56,7 +56,7 @@ def collect_and_download(derivative, pipeline, strategy, out_dir):
 
 if __name__ == "__main__":
 
-    derivatives = ["rois_aal", "rois_cc200", "rois_dosenbach160", "rois_ez", "rois_ho", "rois_tt"]
+    derivatives = ["rois_aal", "rois_cc200", "rois_dosenbach160", "rois_ez", "rois_ho", "rois_tt", "rois_cc400"]
     pipeline = "cpac"
     strategy = "filt_global"
 

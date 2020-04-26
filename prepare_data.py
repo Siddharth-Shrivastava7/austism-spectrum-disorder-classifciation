@@ -103,6 +103,7 @@ def load_patients_to_file(hdf5, pheno, derivatives):
         "ez": "cpac/filt_global/rois_ez/{subject}_rois_ez.1D",
         "ho": "cpac/filt_global/rois_ho/{subject}_rois_ho.1D",
         "tt": "cpac/filt_global/rois_tt/{subject}_rois_tt.1D",
+        "cc400": "cpac/filt_global/rois_cc400/{subject}_rois_cc400.1D"
     }
     #print('storing_patients')
     storage = hdf5.require_group("patients")
@@ -141,7 +142,7 @@ if __name__ == "__main__":
     hdf5 = hdf5_handler(bytes("./data/abide.hdf5",encoding="utf-8"), 'a')
 
 
-    valid_derivatives = ["cc200", "aal", "ez", "ho", "tt", "dosenbach160"]
+    valid_derivatives = ["cc200", "aal", "ez", "ho", "tt", "dosenbach160",'cc400']
     derivatives = [derivative for derivative in arguments["<derivative>"] if derivative in valid_derivatives]
 
     if "patients" not in hdf5:
