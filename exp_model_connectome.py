@@ -15,7 +15,7 @@ def ae(input_size, code_size,
 
     """
 
-    # print(input_size)
+    print(input_size)
 
     # Define data input placeholder
     x = tf.placeholder(tf.float32, [None, input_size])

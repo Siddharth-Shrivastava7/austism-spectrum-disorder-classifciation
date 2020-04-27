@@ -504,10 +504,11 @@ if __name__ == "__main__":
     pheno_path = "./data/phenotypes/Phenotypic_V1_0b_preprocessed1.csv"
     pheno = load_phenotypes(pheno_path)
 
+ 
     # hdf5 = hdf5_handler("./data/abide.hdf5", "a")
     hdf5 = hdf5_handler(bytes("./data/abide.hdf5",encoding="utf8"), 'a')
 
-    valid_derivatives = ["cc200", "aal", "ez", "ho", "tt", "dosenbach160"]
+    valid_derivatives = ["cc200", "aal", "ez", "ho", "tt", "dosenbach160",'cc400']
     derivatives = [derivative for derivative
                    in arguments["<derivative>"]
                    if derivative in valid_derivatives]
